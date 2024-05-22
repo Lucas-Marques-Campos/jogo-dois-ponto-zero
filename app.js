@@ -2,7 +2,7 @@ let listaDeNumerosSorteados = [];
 let numeroLimite = 10;
 let numeroSecreto = gerarNumeroAleatorio();
 let trys = 1;
-let numeroDeErros = 4;
+let numeroDeErros = 3;
 let paalavrachance = numeroDeErros > 1 ? 'chances' : 'chance';
 let mensagemErro = `ERROUU, você perdeu. O número Secreto é o ${numeroSecreto}!`
 
