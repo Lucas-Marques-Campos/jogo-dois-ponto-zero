@@ -2,7 +2,7 @@ let listaDeNumerosSorteados = [];
 let numeroLimite = 10;
 let numeroSecreto = gerarNumeroAleatorio();
 let trys = 1;
-let numeroDeErros = 3;
+let numeroDeErros = 4;
 let paalavrachance = numeroDeErros > 1 ? 'chances' : 'chance';
 
 function exibirTextoNaTela(tag, texto){
@@ -12,7 +12,7 @@ function exibirTextoNaTela(tag, texto){
 }
 function exibirMensagemInicial() {
     exibirTextoNaTela("h1", "Adivinhe o Número Secreto");
-    exibirTextoNaTela("p", `Escolha um número entre 1 e ${numeroLimite}, você só tem ${numeroDeErros} ${paalavrachance}!`);
+    exibirTextoNaTela("p", `Escolha um número entre 1 e ${numeroLimite}, você só tem ${numeroDeErros - 1} ${paalavrachance}!`);
 }
 exibirMensagemInicial();
 console.log(numeroSecreto);
