@@ -4,6 +4,7 @@ let numeroSecreto = gerarNumeroAleatorio();
 let trys = 1;
 let numeroDeErros = 4;
 let paalavrachance = numeroDeErros > 1 ? 'chances' : 'chance';
+let mensagemErro = `ERROUU, você perdeu. O número Secreto é o ${numeroSecreto}!`
 
 function exibirTextoNaTela(tag, texto){
     let campo = document.querySelector(tag,texto);
@@ -26,6 +27,11 @@ function verificarChute() {
     exibirTextoNaTela("p", mensagemtrys);
     document.getElementById("reiniciar").removeAttribute("disabled");
     } else
+    if(trys >= numeroDeErros){
+        VocePerdeu();
+        document.getElementById("reiniciar").removeAttribute("disabled");
+    
+}
   
     if (chute > numeroSecreto) {
         exibirTextoNaTela("p", "O número secreto é menor");
@@ -36,10 +42,6 @@ function verificarChute() {
         trys++
         LimparCampo();
     }  
-    if(trys >= numeroDeErros){
-        VocePerdeu();
-        document.getElementById("reiniciar").removeAttribute("disabled");
-    }
 }
 function gerarNumeroAleatorio() {
     let quantidadeDeElementosNaLista = listaDeNumerosSorteados.length;
@@ -70,6 +72,7 @@ function VocePerdeu(){
     numeroSecreto = gerarNumeroAleatorio();
     LimparCampo();
     trys = 1;
-    exibirTextoNaTela("p", "você perdeu kkkk bixona!");
+  
+    exibirTextoNaTela("h1", mensagemErro);
     document.getElementById("reiniciar").setAttribute("disabled", true); 
 }
