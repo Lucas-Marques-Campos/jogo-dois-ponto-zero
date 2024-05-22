@@ -13,7 +13,7 @@ function exibirTextoNaTela(tag, texto){
 }
 function exibirMensagemInicial() {
     exibirTextoNaTela("h1", "Adivinhe o Número Secreto");
-    exibirTextoNaTela("p", `Escolha um número entre 1 e ${numeroLimite}, você só tem ${numeroDeErros - 1} ${paalavrachance}!`);
+    exibirTextoNaTela("p", `Escolha um número entre 1 e ${numeroLimite}, você só tem ${numeroDeErros} ${paalavrachance}!`);
 }
 exibirMensagemInicial();
 console.log(numeroSecreto);
