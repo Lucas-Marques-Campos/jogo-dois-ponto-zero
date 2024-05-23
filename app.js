@@ -26,7 +26,7 @@ function verificarChute() {
     exibirTextoNaTela("h1", "Acertou!");
     exibirTextoNaTela("p", mensagemtrys);
     document.getElementById("reiniciar").removeAttribute("disabled");
-    } else
+    } else{
     if(trys >= numeroDeErros){
         VocePerdeu();
         document.getElementById("reiniciar").removeAttribute("disabled");
@@ -42,6 +42,7 @@ function verificarChute() {
         trys++
         LimparCampo();
     }  
+    }      
 }
 function gerarNumeroAleatorio() {
     let quantidadeDeElementosNaLista = listaDeNumerosSorteados.length;
